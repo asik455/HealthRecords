@@ -30,7 +30,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchRecords();
-  }, []);
+  }, [fetchRecords]);
 
   useEffect(() => {
     if (records.length > 0) {
