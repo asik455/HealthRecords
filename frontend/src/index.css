@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #17a2b8;
+  background-image: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+}
+
+.auth-box {
+  max-width: 450px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.auth-logo {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.auth-logo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.auth-logo img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.auth-pulse-line {
+  display: inline-block;
+  width: 180px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.welcome-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.health-record-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.health-record-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-stat-card {
+  border-left: 4px solid;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.vital-chart-container {
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.page-container {
+  min-height: calc(100vh - 64px);
+  padding: 20px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #17a2b8;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.record-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.record-facility {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+.add-button {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .auth-box {
+    padding: 20px;
+  }
+  
+  .auth-logo h1 {
+    font-size: 2rem;
+  }
+  
+  .page-container {
+    padding: 15px;
+  }
+}
+
+/* Pulse animation for the health record heartbeat line */
+.heartbeat-pulse {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: pulse 3s linear forwards infinite;
+}
+
+@keyframes pulse {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
